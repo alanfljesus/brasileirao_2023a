@@ -1,0 +1,39 @@
+<c:FragmentDefinition
+ xmlns="sap.m"
+ xmlns:c="sap.ui.core">
+ <Table 
+ id="partidasTable" 
+ headerText="{CabecalhoModel>/rodada_atual/rodada}ª Rodada" 
+ inset="false"
+ items="{ModeloPartidas>/partidas}"
+ >
+  <columns>
+   <Column hAlign="Right" width="10%">
+    <Text text="" />
+   </Column>
+
+   <Column hAlign="Center" width="10%">
+    <Text text="Resultados" />
+   </Column>
+
+   <Column hAlign="Left" width="10%">
+    <Text text="" />
+   </Column>
+  </columns>
+
+  <items>
+   <ColumnListItem vAlign="Middle">
+    <cells>
+     <Image width="20%" src="{ModeloPartidas>time_mandante/escudo}"></Image>
+     <VBox>
+      <Text text="{ModeloPartidas>placar}" />
+      <Text text="{ModeloPartidas>data_realizacao} {ModeloPartidas>hora_realizacao}" />
+      <Text text="{ModeloPartidas>status}" />
+     </VBox>
+     <Image width="20%" src="{ModeloPartidas>time_visitante/escudo}"></Image>
+    </cells>
+   </ColumnListItem>
+
+  </items>
+ </Table>
+</c:FragmentDefinition>

@@ -1,0 +1,113 @@
+<mvc:View controllerName="campeonatobrasileiro.controller.View1"
+    xmlns:c="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <ObjectHeader id="_IDGenObjectHeader1"
+            title="{CabecalhoModel>/nome_popular}"
+            number="{CabecalhoModel>/rodada_atual/rodada}a"
+            numberUnit="Rodada"
+        >
+        </ObjectHeader>
+        <IconTabBar>
+            <items>
+                <IconTabFilter
+                    text="Classificação"
+                    key="classificacao"
+                    icon="sap-icon://competitor"
+                >
+                    <!-- tabela -->
+                    <Table items="{ModeloClassificacao>/Classificacao}">
+                        <columns>
+                            <!-- posicao -->
+                            <Column>
+                                <Text text="Posição"></Text>
+                            </Column>
+                            <!-- escudo -->
+                            <Column>
+                                <Text text=""></Text>
+                            </Column>
+                            <!-- time -->
+                            <Column width="auto">
+                                <Text text="Time"></Text>
+                            </Column>
+                            <!-- pontos -->
+                            <Column width="auto">
+                                <Text text="Pts"></Text>
+                            </Column>
+                            <!-- partidas jogadas -->
+                            <Column width="auto">
+                                <Text text="PJ"></Text>
+                            </Column>
+                            <!-- vitórias -->
+                            <Column width="auto">
+                                <Text text="VIT"></Text>
+                            </Column>
+                            <!-- empates -->
+                            <Column width="auto">
+                                <Text text="E"></Text>
+                            </Column>
+                            <!-- derrotas -->
+                            <Column>
+                                <Text text="DER"></Text>
+                            </Column>
+                            <!-- gols marcados -->
+                            <Column width="auto">
+                                <Text text="GM"></Text>
+                            </Column>
+                            <!-- gols contras -->
+                            <Column width="auto">
+                                <Text text="GC"></Text>
+                            </Column>
+                            <!-- saldo de gols -->
+                            <Column width="auto">
+                                <Text text="SG"></Text>
+                            </Column>
+                        </columns>
+
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <!-- 1º coluna posição-->
+                                    <Text text="{ModeloClassificacao>posicao}"></Text>
+                                    <!-- 2º coluna escudo-->
+                                    <Image
+                                        width="50%"
+                                        src="{ModeloClassificacao>time/escudo}"></Image>
+                                    <!-- 3º coluna time-->
+                                    <Text text="{ModeloClassificacao>time/nome_popular}"></Text>
+                                    <!-- 4º coluna pontos-->
+                                    <Text text="{ModeloClassificacao>pontos}"></Text>
+                                    <!-- 5º coluna jogos-->
+                                    <Text text="{ModeloClassificacao>jogos}"></Text>
+                                    <!-- 6º coluna vitórias-->
+                                    <Text text="{ModeloClassificacao>vitorias}"></Text>
+                                    <!-- 7º coluna empates-->
+                                    <Text text="{ModeloClassificacao>empates}"></Text>
+                                    <!-- 8º coluna derrotas-->
+                                    <Text text="{ModeloClassificacao>derrotas}"></Text>
+                                    <!-- 9º coluna gols marcados-->
+                                    <Text text="{ModeloClassificacao>gols_pro}"></Text>
+                                    <!-- 10º coluna gols contras-->
+                                    <Text text="{ModeloClassificacao>gols_contra}"></Text>
+                                    <!-- 11º coluna saldo de gols-->
+                                    <Text text="{ModeloClassificacao>saldo_gols}"></Text>
+                                </cells>
+                            </ColumnListItem>
+
+                        </items>
+                    </Table>
+                </IconTabFilter>
+
+                <IconTabFilter
+                    text="Partidas"
+                    key="partidas"
+                    icon="sap-icon://soccer"
+                >
+
+                    <c:Fragment fragmentName="campeonatobrasileiro.view.partidas" type="XML" />
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
+    </Page>
+</mvc:View>
