@@ -1,7 +1,7 @@
 
 # Projeto Brasileirão 2023
 
-Este é um projeto desenvolvido para ficar por dentro de todos os jogos do Campeonato Brasileiro de Futebol, também conhecido como Campeonato Brasileiro, Brasileirão e Série A, é a liga brasileira de futebol profissional entre clubes do Brasil, sendo a principal competição futebolística no país.
+Este é um projeto desenvolvido com SAPUI5 para ficar por dentro de todos os jogos do Campeonato Brasileiro de Futebol, também conhecido como Campeonato Brasileiro, Brasileirão e Série A, é a liga brasileira de futebol profissional entre clubes do Brasil, sendo a principal competição futebolística no país.
 
 
 ## Rodando localmente
